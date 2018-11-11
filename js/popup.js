@@ -1,14 +1,9 @@
 let options;
 let count = 3;
 $(() => {
-    $('body').on('click', 'a', function() {
-        chrome.tabs.create({
-            url: $(this).attr('href')
-        });
-        return false;
-    });
     loadOptions(function(recOptions) {
         options = recOptions;
+
         $("#chkExtensionDisabled").prop('checked', options.extensionEnabled);
         $("#chkConflicts").prop('checked', options.showConflicts);
         $("#chkCalendar").prop('checked', options.showCalendar);
@@ -77,6 +72,10 @@ $(() => {
     // =    ==  =  ===  =======   ===  =======  =  =  ===    ===   ==  ===   ===  =  ========   ===  =  ===   ====    ==  ===    =======    ====   =========  ======  ========   ====   ==
     // ===================================================================================================================================================================================
     });
+});
+
+document.getElementById("viewInfoText").addEventListener("click", function() {
+    toggleCopyright();
 });
 
 function changeOption(elem) {
