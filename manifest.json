@@ -27,7 +27,7 @@
             ]
         }
     ],
-    "description": "Shows available seats, professor ratings, and gives you the ability to export your calendar!",
+    "description": "Shows available seats, professor ratings, and gives you the ability to export your calendar.",
     "homepage_url": "https://jonlu.ca",
     "icons": {
         "32": "images/icon32.png",
@@ -44,7 +44,8 @@
         "https://jonlu.ca/*",
         "storage"
     ],
-    "version": "10.0.3",
+  "version": "10.0.3",
+    "version_name": "10.0.3 Edge", 
     "web_accessible_resources": [
         "data/*",
         "css/*",
