@@ -104,3 +104,15 @@ function saveOptions() {
         sendOptions(options);
     });
 }
+
+function toggleCopyright() {
+    var info = document.getElementById("copyrightInfo");
+    var infotext = document.getElementById("viewInfoText");
+    if (info.hasAttribute("hidden")) {
+        info.removeAttribute("hidden");
+        infotext.innerText = "Hide Copyright Info";
+    } else {
+        info.setAttribute("hidden", "hidden");
+        infotext.innerText = "View Copyright Info";
+    }
+}
