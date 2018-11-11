@@ -5,10 +5,17 @@
         "persistent": true
     },
     "browser_action": {
-        "default_icon": {
-            "20": "images/icon32.png",
-            "40": "images/icon128.png"
-        },
+      "default_icon": {
+        "19": "images/icon32.png",
+        "38": "images/icon.png",
+        "44": "images/icon64.png",
+        "50": "images/icon128.png",
+        "54": "images/icon128.png",
+        "90": "images/icon128.png",
+        "128": "images/icon128.png",
+        "200": "images/icon200.jpg",
+        "270": "images/icon200.jpg"
+      },
         "default_popup": "html/popup.html",
         "default_title": "USC Schedule Helper"
     },
@@ -29,21 +36,23 @@
     ],
     "description": "Shows available seats, professor ratings, and gives you the ability to export your calendar.",
     "homepage_url": "https://jonlu.ca",
-    "icons": {
-        "32": "images/icon32.png",
-        "38": "images/icon.png",
-        "64": "images/icon64.png",
-        "128": "images/icon128.png"
-    },
+  "icons": {
+    "54": "images/icon128.png",
+    "90": "images/icon128.png", 
+    "128": "images/icon128.png",
+    "200": "images/icon200.jpg",
+    "270": "images/icon200.jpg",
+    "400": "images/icon400.jpg"
+  },
     "manifest_version": 2,
     "name": "USC Schedule Helper",
-    "permissions": [
-        "*://classes.usc.edu/*/classes/*",
-        "*://webreg.usc.edu/*",
-        "http://jonlu.ca/*",
-        "https://jonlu.ca/*",
-        "storage"
-    ],
+  "permissions": [
+    "*://classes.usc.edu/*/classes/*",
+    "*://webreg.usc.edu/*",
+    "http://jonlu.ca/*",
+    "https://jonlu.ca/*",
+    "storage"
+  ],
   "version": "10.0.3",
     "version_name": "10.0.3 Edge", 
     "web_accessible_resources": [
