@@ -1,51 +1,57 @@
 {
-  "manifest_version": 2,
-  "name": "USC Schedule Helper",
-  "description": "Shows available seats, professor ratings, and gives you the ability to export your calendar!",
-  "version": "10.0.3",
-  "permissions": [
-    "*://classes.usc.edu/*/classes/*",
-    "*://webreg.usc.edu/*",
-    "http://jonlu.ca/*",
-    "https://jonlu.ca/*",
-    "storage"
-  ],
-  "content_scripts": [
-    {
-      "matches": [
+    "author": "Prayaas A.",
+    "background": {
+        "page": "background.html",
+        "persistent": true
+    },
+    "browser_action": {
+        "default_icon": {
+            "20": "images/icon32.png",
+            "40": "images/icon128.png"
+        },
+        "default_popup": "html/popup.html",
+        "default_title": "USC Schedule Helper"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://classes.usc.edu/*/classes/*",
+                "*://webreg.usc.edu/*"
+            ],
+            "js": [
+                "js/libs/jquery.js",
+                "js/common.js",
+                "js/libs/moment.js",
+                "USCScheduleHelper.js",
+                "js/libs/sweetalert.min.js"
+            ]
+        }
+    ],
+    "description": "Shows available seats, professor ratings, and gives you the ability to export your calendar!",
+    "homepage_url": "https://jonlu.ca",
+    "icons": {
+        "32": "images/icon32.png",
+        "38": "images/icon.png",
+        "64": "images/icon64.png",
+        "128": "images/icon128.png"
+    },
+    "manifest_version": 2,
+    "name": "USC Schedule Helper",
+    "permissions": [
         "*://classes.usc.edu/*/classes/*",
-        "*://webreg.usc.edu/*"
-      ],
-      "js": [
-        "js/libs/jquery.js",
-        "js/common.js",
-        "js/libs/moment.js",
-        "USCScheduleHelper.js",
-        "js/libs/sweetalert.min.js"
-      ]
+        "*://webreg.usc.edu/*",
+        "http://jonlu.ca/*",
+        "https://jonlu.ca/*",
+        "storage"
+    ],
+    "version": "10.0.3",
+    "web_accessible_resources": [
+        "data/*",
+        "css/*",
+        "js/*"
+    ],
+    "-ms-preload": {
+        "backgroundScript": "backgroundScriptsAPIBridge.js",
+        "contentScript": "contentScriptsAPIBridge.js"
     }
-  ],
-  "icons": {
-    "64": "images/icon64.png",
-    "32": "images/icon32.png",
-    "38": "images/icon.png",
-    "128": "images/icon128.png"
-  },
-  "background": {
-    "persistent": true,
-    "scripts": [
-      "js/common.js",
-      "js/hot-reload.js"
-    ]
-  },
-  "browser_action": {
-    "default_popup": "html/popup.html",
-    "default_title": "USC Schedule Helper"
-  },
-  "homepage_url": "https://jonlu.ca",
-  "web_accessible_resources": [
-    "data/*",
-    "css/*",
-    "js/*"
-  ]
 }
