@@ -2,6 +2,9 @@
 
 This is a fork of USC Schedule Helper, originally a Chrome extension. I will port it to other browsers here.
 
+Now available on the Microsoft Store for Windows 10 Edge browser!
+https://www.microsoft.com/store/apps/9NNQQ5J6KTXZ
+
 
 ## Screenshots
 
